@@ -10,6 +10,12 @@ const App = () => {
     setCity(event.target.value)
   }
 
+  const [unitGroup, setUnitGroup] = useState('metric')
+
+  const updateUnitGroup = ( event: React.ChangeEvent<HTMLInputElement>) => {
+    setUnitGroup(event.target.checked ? 'us' : 'metric')
+  }
+
   return (
     <>
       <div className="App">
@@ -28,8 +34,14 @@ const App = () => {
           </a>
         </header>
       </div>
-      <input placeholder='city name' onChange={updateCity} value={city}></input>
-      <button onClick={() => getWeather(city)}>Get weather</button>
+      <div>
+        <label htmlFor="unitGroup">American/Metric</label>
+        <input id="unitGroup" type="checkbox" onChange={updateUnitGroup} value={unitGroup}></input>
+      </div>
+      <div>
+        <input placeholder="city name" onChange={updateCity} value={city}></input>
+        <button onClick={() => getWeather(city, unitGroup)}>Get weather</button>
+      </div>
     </>
   );
 }
