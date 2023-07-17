@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { getWeather } from './getWeather';
+import { Response } from './types'
 
 const App = () => {
   const [city, setCity] = useState('')
@@ -16,7 +17,7 @@ const App = () => {
     setUnitGroup(event.target.checked ? 'us' : 'metric')
   }
 
-  const [response, setResponse] = useState({ resolvedAddress: "", description: "" })
+  const [response, setResponse] = useState<Response>({ resolvedAddress: "", description: "", days: [{ hours: [{ datetime: '', temp: ''}]}] })
 
   const updateResponse = ( stringifiedResponse: any ) => {
     setResponse(stringifiedResponse)
@@ -55,6 +56,12 @@ const App = () => {
         <p>
           Quick forecast: {JSON.stringify(response.description)}
         </p>
+        <div>
+          <input type="checkbox" value="showTodayHours"></input>
+          <p>
+            Today's hourly forecast: {JSON.stringify(response.days[0] && response.days[0].hours[0] && response.days[0].hours[0].temp)}
+          </p>
+        </div>
         <p>
           Full response: {JSON.stringify(response)} 
           {/* display response data as string */}
