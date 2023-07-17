@@ -59,7 +59,10 @@ const App = () => {
         <div>
           <input type="checkbox" value="showTodayHours"></input>
           <p>
-            Today's hourly forecast: {JSON.stringify(response.days[0] && response.days[0].hours[0] && response.days[0].hours[0].temp)}
+            Today's hourly forecast: {
+              JSON.stringify(response.days[0].hours.map((hour) => [ hour.datetime, hour.temp ]))
+            // JSON.stringify(response.days[0].hours[0].temp)
+            }
           </p>
         </div>
         <p>
