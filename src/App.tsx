@@ -6,19 +6,23 @@ import { Response } from './types'
 
 const App = () => {
   const [city, setCity] = useState('')
+  const [unitGroup, setUnitGroup] = useState('metric')
+  const [response, setResponse] = useState<Response>({ 
+    resolvedAddress: "", description: "", days: [
+      { hours: 
+        [
+          { datetime: '', temp: ''}
+        ]
+      }
+    ] 
+  })
 
   const updateCity = (event: React.ChangeEvent<HTMLInputElement>) => {
     setCity(event.target.value)
   }
-
-  const [unitGroup, setUnitGroup] = useState('metric')
-
   const updateUnitGroup = ( event: React.ChangeEvent<HTMLInputElement>) => {
     setUnitGroup(event.target.checked ? 'us' : 'metric')
   }
-
-  const [response, setResponse] = useState<Response>({ resolvedAddress: "", description: "", days: [{ hours: [{ datetime: '', temp: ''}]}] })
-
   const updateResponse = ( stringifiedResponse: any ) => {
     setResponse(stringifiedResponse)
   }
@@ -61,7 +65,6 @@ const App = () => {
           <p>
             Today's hourly forecast: {
               JSON.stringify(response.days[0].hours.map((hour) => [ hour.datetime, hour.temp ]))
-            // JSON.stringify(response.days[0].hours[0].temp)
             }
           </p>
         </div>
