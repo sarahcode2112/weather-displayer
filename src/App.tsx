@@ -16,6 +16,12 @@ const App = () => {
     setUnitGroup(event.target.checked ? 'us' : 'metric')
   }
 
+  const [response, setResponse] = useState('placeholder')
+
+  const updateResponse = ( stringifiedResponse: any ) => {
+    setResponse(stringifiedResponse)
+  }
+
   return (
     <>
       <div className="App">
@@ -40,7 +46,13 @@ const App = () => {
       </div>
       <div>
         <input placeholder="city name" onChange={updateCity} value={city}></input>
-        <button onClick={() => getWeather(city, unitGroup)}>Get weather</button>
+        <button onClick={() => getWeather(city, unitGroup, updateResponse)}>Get weather</button>
+      </div>
+      <div>
+        <p>
+          {JSON.stringify(response)} 
+          {/* display response data as string */}
+        </p>
       </div>
     </>
   );
