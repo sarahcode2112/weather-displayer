@@ -16,7 +16,7 @@ const App = () => {
     setUnitGroup(event.target.checked ? 'us' : 'metric')
   }
 
-  const [response, setResponse] = useState({ resolvedAddress: "" })
+  const [response, setResponse] = useState({ resolvedAddress: "", description: "" })
 
   const updateResponse = ( stringifiedResponse: any ) => {
     setResponse(stringifiedResponse)
@@ -50,12 +50,13 @@ const App = () => {
       </div>
       <section>
         <p>
-          <span>Location: </span>
-          {JSON.stringify(response.resolvedAddress)}
+          Location: {JSON.stringify(response.resolvedAddress)}
         </p>
         <p>
-          <span>Full response: </span>
-          {JSON.stringify(response)} 
+          Quick forecast: {JSON.stringify(response.description)}
+        </p>
+        <p>
+          Full response: {JSON.stringify(response)} 
           {/* display response data as string */}
         </p>
       </section>
