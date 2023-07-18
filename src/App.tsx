@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { getWeather } from './getWeather';
 import { Response } from './types'
-import { formatResponse } from './helpers';
+import { WeatherDisplay } from './WeatherDisplay';
 
 const App = () => {
   const [city, setCity] = useState('')
@@ -24,9 +24,10 @@ const App = () => {
   const updateUnitGroup = ( event: React.ChangeEvent<HTMLInputElement>) => {
     setUnitGroup(event.target.checked ? 'us' : 'metric')
   }
-  const updateResponse = ( stringifiedResponse: any ) => {
-    setResponse(stringifiedResponse)
-  }
+  const updateResponse = (response: Response) => {
+    setResponse(response);
+  };
+  
 
   return (
     <>
@@ -55,26 +56,8 @@ const App = () => {
         <button onClick={() => getWeather(city, unitGroup, updateResponse)}>Get weather</button>
       </div>
       <section>
-        <p>
-          Location: {formatResponse(response.resolvedAddress)}
-        </p>
-        <p>
-          Quick forecast: {formatResponse(response.description)}
-        </p>
-        <div>
-          <input type="checkbox" name="showToday" id="showToday" className="peer"></input>
-          <div className="peer-checked:visible">
-            <p>
-              Today's hourly forecast: {
-                formatResponse(response.days[0].hours.map((hour) => [ hour.datetime, hour.temp ]))
-              }
-            </p>
-          </div>
-        </div>
-        <p>
-          Full response: {JSON.stringify(response)} 
-          {/* display response data as string */}
-        </p>
+        <WeatherDisplay response={response} />
+        
       </section>
     </>
   );
