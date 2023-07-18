@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { ReactEventHandler, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { getWeather } from './getWeather';
 import { Response } from './types'
+import { formatResponse } from './helpers';
 
 const App = () => {
   const [city, setCity] = useState('')
@@ -55,18 +56,20 @@ const App = () => {
       </div>
       <section>
         <p>
-          Location: {JSON.stringify(response.resolvedAddress)}
+          Location: {formatResponse(response.resolvedAddress)}
         </p>
         <p>
-          Quick forecast: {JSON.stringify(response.description)}
+          Quick forecast: {formatResponse(response.description)}
         </p>
         <div>
-          <input type="checkbox" value="showTodayHours"></input>
-          <p>
-            Today's hourly forecast: {
-              JSON.stringify(response.days[0].hours.map((hour) => [ hour.datetime, hour.temp ]))
-            }
-          </p>
+          <input type="checkbox" name="showToday" id="showToday" className="peer"></input>
+          <div className="peer-checked:visible">
+            <p>
+              Today's hourly forecast: {
+                formatResponse(response.days[0].hours.map((hour) => [ hour.datetime, hour.temp ]))
+              }
+            </p>
+          </div>
         </div>
         <p>
           Full response: {JSON.stringify(response)} 
