@@ -1,7 +1,11 @@
-import { formatResponse } from "./helpers"
+import { formatResponse, getHourlyForecastByDay } from "./helpers"
 import { Response } from "./types"
 
-export const WeatherDisplay = ({ response }: { response: Response }) => (
+export const WeatherDisplay = ({ response }: { response: Response }) => { 
+  const todayHourlyForecast = getHourlyForecastByDay(response, 0)
+  const tomorrowHourlyForecast = getHourlyForecastByDay(response, 1)
+  
+  return (
     <>
         <p>
           Location: {formatResponse(response.resolvedAddress)}
@@ -25,3 +29,4 @@ export const WeatherDisplay = ({ response }: { response: Response }) => (
         </p>
     </>
 )
+}
