@@ -14,7 +14,9 @@ export const WeatherRequest = ({
     setCity(event.target.value);
   };
   const updateUnitGroup = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setUnitGroup(event.target.checked ? "us" : "metric");
+    const newUnitGroup = event.target.checked ? "us" : "metric";
+    setUnitGroup(newUnitGroup);
+    getWeather(city, newUnitGroup, updateResponse);
   };
 
   return (
