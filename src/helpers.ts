@@ -13,3 +13,4 @@ export const getHourlyForecastByDay = (response: Response, day: number) => {
       return '';
     }
   };
+

@@ -18,7 +18,7 @@ export const WeatherDisplay = ({ response }: { response: Response }) => {
           <div className="peer-checked:visible">
             <p>
               Today's hourly forecast: {
-                formatResponse(response.days[0].hours.map((hour) => [ hour.datetime, hour.temp ]))
+                todayHourlyForecast
               }
             </p>
           </div>
@@ -30,3 +30,4 @@ export const WeatherDisplay = ({ response }: { response: Response }) => {
     </>
 )
 }
+
