@@ -39,9 +39,7 @@ const App = () => {
         <input placeholder="city name" onChange={updateCity} value={city}></input>
         <button onClick={() => getWeather(city, unitGroup, updateResponse)}>Get weather</button>
       </div>
-      <section>
-        <WeatherDisplay response={response} />
-      </section>
+      <WeatherDisplay response={response} />
     </>
   );
 }
