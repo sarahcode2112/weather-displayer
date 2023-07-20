@@ -30,8 +30,8 @@ export const WeatherRequest = ({
           onChange={updateCity}
           value={city}
         ></input>
-        <button onClick={() => getWeather(city, unitGroup, updateResponse)}>
-          Get weather
+        <button className="getForecastButton" onClick={() => getWeather(city, unitGroup, updateResponse)}>
+          Get forecast
         </button>
       </div>
       <div>

@@ -11,6 +11,10 @@ input {
   color: black
 }
 
+.getForecastButton {
+  padding-left: 10px;
+}
+
 .App {
   text-align: center;
   align-content: center;

@@ -14,13 +14,13 @@ test(`renders Quick forecast title`, () => {
   expect(quickForecastElement).toBeInTheDocument();
 });
 
-test('Renders "Berlin, Deutschland" after clicking "Get weather" button', async () => {
+test('Renders "Berlin, Deutschland" after clicking "Get forecast" button', async () => {
   render(<App />);
 
   jest.setTimeout(10000)
 
   const locationInput = screen.getByPlaceholderText('city name');
-  const getForecastButton = screen.getByText('Get weather');
+  const getForecastButton = screen.getByText('Get forecast');
 
   // User enters "Berlin" in the location search box
   fireEvent.change(locationInput, { target: { value: 'Berlin' } });
