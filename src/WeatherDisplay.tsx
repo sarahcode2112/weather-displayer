@@ -3,6 +3,7 @@ import { Response } from "./types"
 
 export const WeatherDisplay = ({ response }: { response: Response }) => { 
   const todayHourlyForecast = getHourlyForecastByDay(response, 0)
+
   const tomorrowHourlyForecast = getHourlyForecastByDay(response, 1)
   
   return (
@@ -14,13 +15,19 @@ export const WeatherDisplay = ({ response }: { response: Response }) => {
           Quick forecast: {formatResponse(response.description)}
         </p>
         <div>
-          <input type="checkbox" name="showToday" id="showToday" className="peer"></input>
-          <div className="peer-checked:visible">
-            <p>
-              Today's hourly forecast: {
-                todayHourlyForecast
-              }
-            </p>
+          <input type="checkbox" name="showToday" id="showToday" ></input>
+          <div>
+            Today's hourly forecast: {
+              todayHourlyForecast &&
+              todayHourlyForecast.map((hour, index) => (
+                <ul>
+                  <li>
+                    <span key={index}>
+                      {hour.datetime} {hour.temp}&deg;
+                    </span>
+                  </li>
+                </ul>
+              ))}
           </div>
         </div>
         <p>

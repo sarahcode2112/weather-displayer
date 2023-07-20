@@ -16,6 +16,7 @@ export const WeatherRequest = ({
   const updateUnitGroup = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newUnitGroup = event.target.checked ? "us" : "metric";
     setUnitGroup(newUnitGroup);
+    // TODO: add a check here for if the response already exists. only run the below line if the response already exists.
     getWeather(city, newUnitGroup, updateResponse);
   };
 
