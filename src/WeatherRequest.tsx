@@ -22,15 +22,6 @@ export const WeatherRequest = ({
   return (
     <>
       <div>
-        <label htmlFor="unitGroup">American/Metric</label>
-        <input
-          id="unitGroup"
-          type="checkbox"
-          onChange={updateUnitGroup}
-          value={unitGroup}
-        ></input>
-      </div>
-      <div>
         <input
           placeholder="city name"
           onChange={updateCity}
@@ -39,6 +30,15 @@ export const WeatherRequest = ({
         <button onClick={() => getWeather(city, unitGroup, updateResponse)}>
           Get weather
         </button>
+      </div>
+      <div>
+        <label htmlFor="unitGroup">American/Metric</label>
+        <input
+          id="unitGroup"
+          type="checkbox"
+          onChange={updateUnitGroup}
+          value={unitGroup}
+        ></input>
       </div>
     </>
   );
