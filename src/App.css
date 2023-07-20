@@ -1,7 +1,15 @@
+.header-text {
+  color: white;
+  font-size: xx-large;
+}
+
 .App {
   text-align: center;
   align-content: center;
+  color: rgb(236, 236, 236);
 }
+
+
 
 .App-header {
   background-color: #282c34;

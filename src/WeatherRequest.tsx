@@ -21,6 +21,9 @@ export const WeatherRequest = ({
 
   return (
     <>
+      <div className="header-text">
+        Weather <strong>Request</strong>
+      </div>
       <div>
         <input
           placeholder="city name"
