@@ -24,7 +24,7 @@ export const WeatherDisplay = ({ response }: { response: Response }) => {
           </div>
         </div>
         <p>
-          Full response: {JSON.stringify(response)} 
+          {/* Full response: {JSON.stringify(response)}  */}
           {/* display response data as string */}
         </p>
     </>
