@@ -16,10 +16,10 @@ const App = () => {
   };
 
   return (
-    <>
+    <div className="App">
       <WeatherRequest updateResponse={updateResponse} />
       <WeatherDisplay response={response} />
-    </>
+    </div>
   );
 };
 
