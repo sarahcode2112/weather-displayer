@@ -19,7 +19,7 @@ test('Renders "Berlin, Deutschland" after clicking "Get forecast" button', async
 
   jest.setTimeout(10000)
 
-  const locationInput = screen.getByPlaceholderText('city name');
+  const locationInput = screen.getByPlaceholderText('Enter city name');
   const getForecastButton = screen.getByText('Get forecast');
 
   // User enters "Berlin" in the location search box
