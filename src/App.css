@@ -1,6 +1,6 @@
 .header-text {
-  color: white;
   font-size: xx-large;
+  padding: 10px;
 }
 
 input::placeholder {
@@ -9,9 +9,8 @@ input::placeholder {
 }
 
 input {
-  color: black;
   text-align: center;
-  margin-right: 10px
+  @apply rounded text-black mr-1.5
 }
 
 .getForecastButton {
