@@ -14,7 +14,7 @@ test(`renders Quick forecast title`, () => {
   expect(quickForecastElement).toBeInTheDocument();
 });
 
-test('Renders "Berlin, Deutschland" after clicking "Get forecast" button', async () => {
+test('Renders "Berlin, Deutschland" after typing "Berlin" and clicking "Get forecast" button', async () => {
   render(<App />);
 
   jest.setTimeout(10000)
