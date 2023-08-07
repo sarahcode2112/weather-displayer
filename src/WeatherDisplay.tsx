@@ -9,17 +9,17 @@ export const WeatherDisplay = ({ response }: { response: Response }) => {
   
   return (
     <>
-        <p>
+        <div className="weatherDescription">
           Location: {formatResponse(response.resolvedAddress)}
-        </p>
-        <p>
+        </div>
+        <div className="weatherDescription">
           Forecast: {formatResponse(response.description)}
-        </p>
+        </div>
         <ToggleDropdown todayHourlyForecast={todayHourlyForecast}></ToggleDropdown>
-        <p>
+        <div>
           {/* Full response: {JSON.stringify(response)}   */}
           {/* display response data as string */}
-        </p>
+        </div>
     </>
 )
 }

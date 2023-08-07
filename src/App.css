@@ -18,23 +18,11 @@ input {
   @apply bg-green-500 hover:bg-green-700 text-white font-bold my-4 py-2 px-4 rounded;
 }
 
+.weatherDescription {
+  @apply font-semibold py-1
+}
+
 .App {
   text-align: center;
-  align-content: center;
   color: rgb(236, 236, 236);
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
