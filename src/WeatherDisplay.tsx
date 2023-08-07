@@ -1,3 +1,4 @@
+import { ToggleDropdown } from "./ToggleDropdown"
 import { formatResponse, getHourlyForecastByDay } from "./helpers"
 import { Response } from "./types"
 
@@ -12,24 +13,9 @@ export const WeatherDisplay = ({ response }: { response: Response }) => {
           Location: {formatResponse(response.resolvedAddress)}
         </p>
         <p>
-          Quick forecast: {formatResponse(response.description)}
+          Forecast: {formatResponse(response.description)}
         </p>
-        <div>
-          <input type="checkbox" name="showToday" id="showToday" ></input>
-          <div>
-            Today's hourly forecast: {
-              todayHourlyForecast &&
-              todayHourlyForecast.map((hour, index) => (
-                <ul>
-                  <li>
-                    <span key={index}>
-                      {hour.datetime} {hour.temp}&deg;
-                    </span>
-                  </li>
-                </ul>
-              ))}
-          </div>
-        </div>
+        <ToggleDropdown todayHourlyForecast={todayHourlyForecast}></ToggleDropdown>
         <p>
           {/* Full response: {JSON.stringify(response)}  */}
           {/* display response data as string */}
