@@ -4,7 +4,8 @@
 }
 
 input::placeholder {
-  color: rgb(50, 50, 50)
+  color: rgb(50, 50, 50);
+  padding-left: 5px
 }
 
 input {

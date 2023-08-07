@@ -27,7 +27,7 @@ export const WeatherRequest = ({
       </div>
       <div>
         <input
-          placeholder=" Enter city name"
+          placeholder="City or town name"
           onChange={updateCity}
           value={city}
         ></input>
