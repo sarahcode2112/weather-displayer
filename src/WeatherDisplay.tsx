@@ -17,7 +17,7 @@ export const WeatherDisplay = ({ response }: { response: Response }) => {
         </p>
         <ToggleDropdown todayHourlyForecast={todayHourlyForecast}></ToggleDropdown>
         <p>
-          {/* Full response: {JSON.stringify(response)}  */}
+          {/* Full response: {JSON.stringify(response)}   */}
           {/* display response data as string */}
         </p>
     </>
