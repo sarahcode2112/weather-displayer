@@ -5,11 +5,13 @@
 
 input::placeholder {
   color: rgb(106, 106, 106);
+  text-align: center;
 }
 
 input {
   color: black;
-  padding-left: 5px
+  text-align: center;
+  margin-right: 10px
 }
 
 .getForecastButton {
