@@ -18,10 +18,14 @@ input {
 }
 
 .weatherDescription {
-  @apply font-semibold py-1
+  @apply font-semibold py-1 text-lg
 }
 
 .App {
   text-align: center;
   color: rgb(236, 236, 236);
+}
+
+.hourlyForecastRow {
+  @apply inline-block bg-green-200  bg-opacity-20 m-1 p-2 rounded text-lg
 }

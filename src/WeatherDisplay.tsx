@@ -1,4 +1,4 @@
-import { ToggleDropdown } from "./ToggleDropdown"
+import { HourlyForecast } from "./HourlyForecast"
 import { formatResponse, getHourlyForecastByDay } from "./helpers"
 import { Response } from "./types"
 
@@ -15,7 +15,7 @@ export const WeatherDisplay = ({ response }: { response: Response }) => {
         <div className="weatherDescription">
           Forecast: {formatResponse(response.description)}
         </div>
-        <ToggleDropdown todayHourlyForecast={todayHourlyForecast}></ToggleDropdown>
+        <HourlyForecast todayHourlyForecast={todayHourlyForecast}></HourlyForecast>
         <div>
           {/* Full response: {JSON.stringify(response)}   */}
           {/* display response data as string */}
