@@ -28,13 +28,6 @@ export const WeatherRequest = ({
         onChange={updateCity}
         value={city}
       ></input>
-      {/* <label htmlFor="unitGroup">American/Metric</label>
-      <input
-        id="unitGroup"
-        type="checkbox"
-        onChange={updateUnitGroup}
-        value={unitGroup}
-      /> */}
       <div>
         <label className="relative inline-flex items-center cursor-pointer">
           <input type="checkbox" value="unitGroup" onChange={updateUnitGroup} className="sr-only peer"/>
