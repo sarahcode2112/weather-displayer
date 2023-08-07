@@ -12,14 +12,21 @@ export const getHourlyForecastByDay = (response: Response, day: number): { datet
     }
   };
 
-// export const getHourlyForecastByDay = (response: Response, day: number): { datetime: string; temp: string; }[] | null => {
-//   if (response.days[day] && response.days[day].hours) {
-//     return response.days[day].hours.map(
-//       (hour: { datetime: string; temp: string; }) => 
-//       hour
-//       // [hour.datetime, ' ', hour.temp]
-//     )
-//   } else {
-//     return null;
-//   }
-// };
+  export const formatSingleDateTime = (datetimeEntry: string): string => {
+    const [time, _] = datetimeEntry.split(' ');
+
+    const hour = parseInt(time.split(':')[0], 10);
+
+    let formattedTime: string;
+    if (hour === 0) {
+        formattedTime = `12AM`;
+    } else if (hour < 12) {
+        formattedTime = `${hour}AM`;
+    } else if (hour === 12) {
+        formattedTime = `12PM`;
+    } else {
+        formattedTime = `${hour - 12}PM`;
+    }
+
+    return formattedTime;
+};
