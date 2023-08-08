@@ -1,4 +1,4 @@
-import App from './App';
+import App from '../App';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 
 test(`renders 'Today by the hour' title`, () => {
