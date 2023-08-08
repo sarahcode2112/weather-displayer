@@ -2,16 +2,16 @@
 import App from './App';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 
-test(`renders Today's hourly forecast title`, () => {
+test(`renders 'By the hour' title`, () => {
   render(<App />);
-  const hourlyForecastElement = screen.getByText(/Today's hourly forecast/i);
+  const hourlyForecastElement = screen.getByText(/By the hour/i);
   expect(hourlyForecastElement).toBeInTheDocument();
 });
 
-test(`renders Quick forecast title`, () => {
+test(`renders 'Forecast:' title`, () => {
   render(<App />);
-  const quickForecastElement = screen.getByText(/Quick forecast/i);
-  expect(quickForecastElement).toBeInTheDocument();
+  const forecastElement = screen.getByText(/Forecast:/i);
+  expect(forecastElement).toBeInTheDocument();
 });
 
 test('Renders "Berlin, Deutschland" after typing "Berlin" and clicking "Get forecast" button', async () => {
@@ -19,7 +19,7 @@ test('Renders "Berlin, Deutschland" after typing "Berlin" and clicking "Get fore
 
   jest.setTimeout(10000)
 
-  const locationInput = screen.getByPlaceholderText('Enter city name');
+  const locationInput = screen.getByPlaceholderText('City or town name');
   const getForecastButton = screen.getByText('Get forecast');
 
   // User enters "Berlin" in the location search box
