@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { getWeather } from "./getWeather";
+import { getWeather } from "./utils/getWeather";
 import { Response } from "./types";
 
 export const WeatherRequest = ({
