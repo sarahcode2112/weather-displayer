@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./App.css";
+import ".//styles/App.css";
 import { Response } from "./types";
 import { WeatherDisplay } from "./WeatherDisplay";
 import { WeatherRequest } from "./WeatherRequest";
