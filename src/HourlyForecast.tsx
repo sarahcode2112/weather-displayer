@@ -1,4 +1,4 @@
-import { formatSingleDateTime } from './helpers';
+import { formatSingleDateTime } from './formatters';
 
 export const HourlyForecast = ({ todayHourlyForecast, tomorrowHourlyForecast }) => {
   console.log('Tomorrow Hourly Forecast:', tomorrowHourlyForecast);
