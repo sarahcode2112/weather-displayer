@@ -6,7 +6,6 @@ import { Response } from "./types"
 export const WeatherDisplay = ({ response }: { response: Response }) => { 
   const todayHourlyForecast = getHourlyForecastByDay(response, 0)
   const tomorrowHourlyForecast = getHourlyForecastByDay(response, 1)
-  console.log('response', response)
   
   return (
     <>

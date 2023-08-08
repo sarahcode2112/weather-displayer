@@ -1,5 +1,7 @@
 import App from '../App';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
+
 
 test(`renders 'Today by the hour' title`, () => {
   render(<App />);
