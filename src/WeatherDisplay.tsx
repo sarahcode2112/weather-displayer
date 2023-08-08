@@ -4,8 +4,8 @@ import { Response } from "./types"
 
 export const WeatherDisplay = ({ response }: { response: Response }) => { 
   const todayHourlyForecast = getHourlyForecastByDay(response, 0)
-
   const tomorrowHourlyForecast = getHourlyForecastByDay(response, 1)
+  console.log('response', response)
   
   return (
     <>
@@ -15,7 +15,7 @@ export const WeatherDisplay = ({ response }: { response: Response }) => {
         <div className="weatherDescription">
           Forecast: {formatResponse(response.description)}
         </div>
-        <HourlyForecast todayHourlyForecast={todayHourlyForecast}></HourlyForecast>
+        <HourlyForecast todayHourlyForecast={todayHourlyForecast} tomorrowHourlyForecast={tomorrowHourlyForecast}></HourlyForecast>
         <div>
           {/* Full response: {JSON.stringify(response)}   */}
           {/* display response data as string */}

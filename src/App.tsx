@@ -8,7 +8,7 @@ const App = () => {
   const [response, setResponse] = useState<Response>({
     resolvedAddress: "",
     description: "",
-    days: [{ hours: [{ datetime: "", temp: "" }] }],
+    days: [{ hours: [{ datetime: "", temp: "" }] }, { hours: [{ datetime: "", temp: "" }] }],
   });
 
   const updateResponse = (response: Response) => {
