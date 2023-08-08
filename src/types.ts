@@ -1,4 +1,4 @@
-export type Response = { 
+export type WeatherResponse = { 
     resolvedAddress: string, 
     description: string, 
     days: { hours: 
