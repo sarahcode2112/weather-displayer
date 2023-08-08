@@ -7,8 +7,8 @@ export const HourlyForecast = ({ todayHourlyForecast }) => {
         {todayHourlyForecast[1] && (
           <>
             {todayHourlyForecast.map((hour) => (
-              <div>
-                <div key={hour.datetime} className="hourlyForecastRow">
+              <div key={hour.datetime}>
+                <div className="hourlyForecastRow">
                   {formatSingleDateTime(hour.datetime)}: {hour.temp}&deg;
                 </div>
               </div>
