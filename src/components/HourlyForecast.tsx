@@ -1,4 +1,4 @@
-import { formatSingleDateTime } from './utils/formatters';
+import { formatSingleDateTime } from '../utils/formatters';
 
 export const HourlyForecast = ({ todayHourlyForecast, tomorrowHourlyForecast }) => {
   return (

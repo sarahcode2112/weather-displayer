@@ -1,8 +1,8 @@
 import { useState } from "react";
 import ".//styles/App.css";
 import { Response } from "./types";
-import { WeatherDisplay } from "./WeatherDisplay";
-import { WeatherRequest } from "./WeatherRequest";
+import { WeatherDisplay } from "./components/WeatherDisplay";
+import { WeatherRequest } from "./components/WeatherRequest";
 
 const App = () => {
   const [response, setResponse] = useState<Response>({
