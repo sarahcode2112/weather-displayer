@@ -1,9 +1,9 @@
 import App from './App';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 
-test(`renders 'By the hour' title`, () => {
+test(`renders 'Today by the hour' title`, () => {
   render(<App />);
-  const hourlyForecastElement = screen.getByText(/By the hour/i);
+  const hourlyForecastElement = screen.getByText(/Today by the hour/i);
   expect(hourlyForecastElement).toBeInTheDocument();
 });
 

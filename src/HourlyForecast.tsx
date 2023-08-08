@@ -1,10 +1,9 @@
 import { formatSingleDateTime } from './utils/formatters';
 
 export const HourlyForecast = ({ todayHourlyForecast, tomorrowHourlyForecast }) => {
-  console.log('Tomorrow Hourly Forecast:', tomorrowHourlyForecast);
   return (
     <>
-        <div className="weatherDescription">By the hour:</div>
+        <div className="weatherDescription">Today by the hour:</div>
         {todayHourlyForecast[1] && (
           <>
             {todayHourlyForecast.map((hour) => (
