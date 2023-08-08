@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ".//styles/global-styles.css";
-import { WeatherResponse } from "./types";
+import { WeatherResponse } from "./types/types";
 import { WeatherDisplay } from "./components/WeatherDisplay";
 import { WeatherRequest } from "./components/WeatherRequest";
 

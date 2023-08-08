@@ -1,7 +1,7 @@
 import { HourlyForecast } from "./HourlyForecast"
 import { getHourlyForecastByDay } from "../utils/getHourlyForecastByDay"
 import { formatResponse } from "../utils/formatters"
-import { WeatherResponse } from "../types"
+import { WeatherResponse } from "../types/types"
 
 export const WeatherDisplay = ({ response }: { response: WeatherResponse }) => { 
   const todayHourlyForecast = getHourlyForecastByDay(response, 0)
