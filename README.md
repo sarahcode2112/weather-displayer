@@ -9,3 +9,4 @@ To run tests, you can run:
 ### `npm test`
 
 Credit: this app was started with create-react-app.
+Website icon by GOWI.
