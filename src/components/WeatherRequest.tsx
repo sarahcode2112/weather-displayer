@@ -13,10 +13,15 @@ export const WeatherRequest = ({
   const updateCity = (event: React.ChangeEvent<HTMLInputElement>) => {
     setCity(event.target.value);
   };
+
   const updateUnitGroup = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newUnitGroup = event.target.checked ? "us" : "metric";
     setUnitGroup(newUnitGroup);
   };
+
+  const requestWeather = () => {
+    getWeather(city, unitGroup, updateResponse)
+  }
 
   return (
     <>
@@ -38,7 +43,7 @@ export const WeatherRequest = ({
         <span className="metricLabel ml-2">Imperial</span>
       </div>
       <div>
-        <button className="getForecastButton" onClick={() => getWeather(city, unitGroup, updateResponse)}>
+        <button className="getForecastButton" onClick={requestWeather}>
           Get forecast
         </button>
       </div>
