@@ -1,4 +1,4 @@
-import { HourlyForecast } from "./HourlyForecast"
+import { HourlyForecast } from "./HourlyForecast/HourlyForecast"
 import { getHourlyForecastByDay } from "../utils/getHourlyForecastByDay"
 import { formatResponse } from "../utils/formatters"
 import { WeatherResponse } from "../types/types"
