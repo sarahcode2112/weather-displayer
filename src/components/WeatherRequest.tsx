@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { getWeather } from "../utils/getWeather";
+import { fetchWeatherData } from "../utils/fetchWeatherData";
 import { WeatherResponse } from "../types/types";
 
 export const WeatherRequest = ({
@@ -20,7 +20,7 @@ export const WeatherRequest = ({
   };
 
   const requestWeather = () => {
-    getWeather(city, unitGroup, updateResponse)
+    fetchWeatherData(city, unitGroup, updateResponse)
   }
 
   return (
