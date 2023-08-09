@@ -15,7 +15,11 @@ input::placeholder {
 
 input {
   text-align: center;
-  @apply rounded text-black mr-1.5;
+  @apply rounded text-black mb-2;
+}
+
+.metricLabel {
+  vertical-align: top;
 }
 
 .getForecastButton {
@@ -23,7 +27,7 @@ input {
 }
 
 .weatherDescription {
-  @apply font-semibold py-1 text-lg;
+  @apply font-semibold py-1 text-lg mt-2;
 }
 
 .hourlyForecastRow {
