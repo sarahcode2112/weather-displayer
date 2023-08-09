@@ -45,4 +45,19 @@ input {
 
 .hourlyForecastRow {
   @apply inline-block bg-green-200 bg-opacity-20 m-1 p-2 rounded text-lg;
+  width: 100%;
+  white-space: nowrap;
 }
+
+.hourly-forecast-container {
+  @apply flex justify-center gap-6;
+}
+
+.hourly-forecast-columns {
+  @apply flex;
+}
+
+.hourly-forecast-column {
+  @apply flex-1 p-5;
+}
+
