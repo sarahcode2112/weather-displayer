@@ -1,3 +1,8 @@
+.App {
+  text-align: center;
+  color: rgb(236, 236, 236);
+}
+
 .header-text {
   font-size: xx-large;
   padding: 10px;
@@ -10,7 +15,7 @@ input::placeholder {
 
 input {
   text-align: center;
-  @apply rounded text-black mr-1.5
+  @apply rounded text-black mr-1.5;
 }
 
 .getForecastButton {
@@ -18,14 +23,9 @@ input {
 }
 
 .weatherDescription {
-  @apply font-semibold py-1 text-lg
-}
-
-.App {
-  text-align: center;
-  color: rgb(236, 236, 236);
+  @apply font-semibold py-1 text-lg;
 }
 
 .hourlyForecastRow {
-  @apply inline-block bg-green-200  bg-opacity-20 m-1 p-2 rounded text-lg
+  @apply inline-block bg-green-200  bg-opacity-20 m-1 p-2 rounded text-lg;
 }
