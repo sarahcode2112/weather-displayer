@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import { fetchWeatherData } from "../utils/fetchWeatherData";
-import { type WeatherResponse } from "../types/types";
+import { type WeatherRequestProps } from "../types/types";
 
-export const WeatherRequest = ({
+export const WeatherRequest: React.FC<WeatherRequestProps> = ({
   updateResponse,
-}: {
-  updateResponse: (response: WeatherResponse) => void;
 }) => {
   const [city, setCity] = useState("");
   const [unitGroup, setUnitGroup] = useState("metric");
