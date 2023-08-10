@@ -12,7 +12,7 @@
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module",
-    "project": ["./weather-displayer/tsconfig.json"]
+    "project": ["./tsconfig.json"]
   },
   "plugins": ["prettier"],
   "rules": {}
