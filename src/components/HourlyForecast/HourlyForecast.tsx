@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import React from "react";
 import { HourlyForecastRows } from "./HourlyForecastRows";
+import { type Hours } from "../../types/types";
 
-export const HourlyForecast: React.FC = ({
-  todayHourlyForecast,
-  tomorrowHourlyForecast,
-}) => (
+export const HourlyForecast: React.FC<{
+  todayHourlyForecast: Hours;
+  tomorrowHourlyForecast: Hours;
+}> = ({ todayHourlyForecast, tomorrowHourlyForecast }) => (
   <div className="flex flex-wrap sm:flex-no-wrap">
     <div className="weatherDescription w-full sm:w-1/2 p-4">
       Today by the hour:

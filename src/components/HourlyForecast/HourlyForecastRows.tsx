@@ -1,7 +1,10 @@
 import React from "react";
 import { formatSingleDateTime } from "../../utils/formatters";
+import { type Hours } from "../../types/types";
 
-export const HourlyForecastRows: React.FC = ({ hourlyForecast }) => {
+export const HourlyForecastRows: React.FC<{ hourlyForecast: Hours }> = ({
+  hourlyForecast,
+}) => {
   const rowsPerColumn = 12;
 
   return (
