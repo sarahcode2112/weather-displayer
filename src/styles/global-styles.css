@@ -29,7 +29,7 @@ code {
 
 /* Header styles */
 
-.header-text {
+.headerText {
   @apply text-3xl p-4;
 }
 
@@ -43,7 +43,7 @@ input {
   @apply rounded text-black mb-2 text-center;
 }
 
-/* Unit toggle label styles */
+/* Unit toggle label style */
 
 .unitToggleButtonLabelText {
   @apply text-sm font-medium align-top

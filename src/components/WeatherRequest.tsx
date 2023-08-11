@@ -25,7 +25,7 @@ export const WeatherRequest: React.FC<WeatherRequestProps> = ({
 
   return (
     <>
-      <div className="header-text">
+      <div className="headerText">
         Weather <strong>Request</strong>
       </div>
       <input
