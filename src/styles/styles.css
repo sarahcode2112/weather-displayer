@@ -80,7 +80,7 @@ input {
 
 /* Weather description text styles */
 
-.weatherDescription {
+.weatherDescriptionText {
   @apply font-semibold py-1 text-lg mt-2;
 }
 

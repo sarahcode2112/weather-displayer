@@ -10,10 +10,10 @@ export const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ response }) => {
 
   return (
     <>
-      <div className="weatherDescription">
+      <div className="weatherDescriptionText">
         Location: {formatResponse(response.resolvedAddress)}
       </div>
-      <div className="weatherDescription">
+      <div className="weatherDescriptionText">
         Forecast: {formatResponse(response.description)}
       </div>
       <HourlyForecast
