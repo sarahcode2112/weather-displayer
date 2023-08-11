@@ -7,3 +7,7 @@ export interface WeatherResponse {
 export interface WeatherRequestProps {
   updateResponse: (response: WeatherResponse) => void;
 }
+
+export interface WeatherDisplayProps {
+  response: WeatherResponse;
+}

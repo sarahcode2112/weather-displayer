@@ -1,12 +1,13 @@
+import React from "react";
 import { HourlyForecast } from "./HourlyForecast/HourlyForecast";
 import { getHourlyForecastByDay } from "../utils/getHourlyForecastByDay";
 import { formatResponse } from "../utils/formatters";
-import type { WeatherResponse } from "../types/types";
+import type { WeatherDisplayProps } from "../types/types";
 
-export const WeatherDisplay = ({ response }: { response: WeatherResponse }) => { 
-  const todayHourlyForecast = getHourlyForecastByDay(response, 0)
-  const tomorrowHourlyForecast = getHourlyForecastByDay(response, 1)
-  
+export const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ response }) => {
+  const todayHourlyForecast = getHourlyForecastByDay(response, 0);
+  const tomorrowHourlyForecast = getHourlyForecastByDay(response, 1);
+
   return (
     <>
       <div className="weatherDescription">
@@ -15,12 +16,10 @@ export const WeatherDisplay = ({ response }: { response: WeatherResponse }) => {
       <div className="weatherDescription">
         Forecast: {formatResponse(response.description)}
       </div>
-      <HourlyForecast todayHourlyForecast={todayHourlyForecast} tomorrowHourlyForecast={tomorrowHourlyForecast}></HourlyForecast>
-      <div>
-        {/* Full response: {JSON.stringify(response)}   */}
-        {/* display response data as string */}
-      </div>
+      <HourlyForecast
+        todayHourlyForecast={todayHourlyForecast}
+        tomorrowHourlyForecast={tomorrowHourlyForecast}
+      ></HourlyForecast>
     </>
-  )
-}
-
+  );
+};
