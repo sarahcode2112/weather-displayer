@@ -8,16 +8,16 @@ export const HourlyForecastRows: React.FC<{ hourlyForecast: Hours }> = ({
   const rowsPerColumn = 12;
 
   return (
-    <div className="hourly-forecast-container">
-      <div className="hourly-forecast-columns">
-        <div className="hourly-forecast-column">
+    <div className="hourlyForecastContainer">
+      <div className="hourlyForecastColumns">
+        <div className="hourlyForecastColumn">
           {hourlyForecast.slice(0, rowsPerColumn).map((hour) => (
             <div key={hour.datetime} className="hourlyForecastRow">
               {formatSingleDateTime(hour.datetime)}: {hour.temp}&deg;
             </div>
           ))}
         </div>
-        <div className="hourly-forecast-column">
+        <div className="hourlyForecastColumn">
           {hourlyForecast.slice(rowsPerColumn).map((hour) => (
             <div key={hour.datetime} className="hourlyForecastRow">
               {formatSingleDateTime(hour.datetime)}: {hour.temp}&deg;

@@ -86,15 +86,15 @@ input {
   white-space: nowrap;
 }
 
-.hourly-forecast-container {
+.hourlyForecastContainer {
   @apply flex justify-center gap-6;
 }
 
-.hourly-forecast-columns {
+.hourlyForecastColumns {
   @apply flex;
 }
 
-.hourly-forecast-column {
+.hourlyForecastColumn {
   @apply flex-1 p-5;
 }
 
