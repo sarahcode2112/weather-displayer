@@ -1,17 +1,20 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import ".//styles/global-styles.css";
-import { WeatherResponse } from "./types/types";
+import { type WeatherResponse } from "./types/types";
 import { WeatherDisplay } from "./components/WeatherDisplay";
 import { WeatherRequest } from "./components/WeatherRequest";
 
-const App = () => {
+const App: React.FC = () => {
   const [response, setResponse] = useState<WeatherResponse>({
     resolvedAddress: "",
     description: "",
-    days: [{ hours: [{ datetime: "", temp: "" }] }, { hours: [{ datetime: "", temp: "" }] }],
+    days: [
+      { hours: [{ datetime: "", temp: "" }] },
+      { hours: [{ datetime: "", temp: "" }] },
+    ],
   });
 
-  const updateResponse = (response: WeatherResponse) => {
+  const updateResponse = (response: WeatherResponse): void => {
     setResponse(response);
   };
 
