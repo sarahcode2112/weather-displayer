@@ -27,9 +27,13 @@ code {
   @apply text-center text-white
 }
 
+/* Header styles */
+
 .header-text {
   @apply text-3xl p-4;
 }
+
+/* Input styles */
 
 input::placeholder {
   @apply text-gray-400 text-center
@@ -39,15 +43,19 @@ input {
   @apply rounded text-black mb-2 text-center;
 }
 
-.metricLabel {
+/* Unit toggle label styles */
+
+.unitToggleButtonLabelText {
   @apply text-sm font-medium align-top
 }
+
+/* Button styles */
 
 .getForecastButton {
   @apply bg-green-500 hover:bg-green-700 text-white font-bold my-4 py-2 px-4 rounded;
 }
 
-.toggleButton::after {
+.unitToggleButton::after {
   content: '';
   position: absolute;
   top: 2px;
@@ -60,13 +68,17 @@ input {
   transition: all 0.3s;
 }
 
-.toggleButton {
+.unitToggleButton {
   @apply w-11 h-6 bg-gray-200 dark:border-gray-600
 }
+
+/* Text styles */
 
 .weatherDescription {
   @apply font-semibold py-1 text-lg mt-2;
 }
+
+/* Hourly forecast styles */
 
 .hourlyForecastRow {
   @apply inline-block bg-green-200 bg-opacity-20 m-1 p-2 rounded text-lg;
