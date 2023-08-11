@@ -1,6 +1,5 @@
 /* Global styles */
 
-/* Include tailwind styles in this project */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
