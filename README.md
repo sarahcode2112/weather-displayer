@@ -8,5 +8,12 @@ To run tests, you can run:
 
 ### `npm test`
 
+For debugging, you can see the full API response on the web page by adding this div into a frontend component such as WeatherDisplay:
+
+<div>
+    {/* Full response: {JSON.stringify(response)}   */}
+    {/* display response data as string */}
+</div>
+
 Credit: this app was started with create-react-app.
 Website icon by GOWI.
