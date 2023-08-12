@@ -8,6 +8,13 @@ To run tests, you can run:
 
 ### `npm test`
 
+## Features
+
+- Search functionality to find weather forecasts for specific cities/towns.
+- Display of current one-sentence weather description, and temperature.
+- Choice of metric or imperial unit groups.
+- Clear and intuitive user interface.
+
 ## Usage
 
 How to use the app:
