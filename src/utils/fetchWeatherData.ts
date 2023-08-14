@@ -18,7 +18,7 @@ export const fetchWeatherData = (
     }) // save response data in response object
     .catch((error) => {
       alert(
-        "The weather request did not work. Did you type a city name (without typos)?",
+        "The weather request did not work. Did you type a city or town name (without typos)?",
       );
       console.log(error);
     });
