@@ -1,5 +1,8 @@
 import { type WeatherResponse } from "../types/types";
 
+const errorMessage =
+  "The weather request did not work. Did you type a city or town name (without typos)?";
+
 export const fetchWeatherData = (
   city: string,
   unitGroup: string,
@@ -17,9 +20,7 @@ export const fetchWeatherData = (
       updateResponse(objectRes);
     }) // save response data in response object
     .catch((error) => {
-      alert(
-        "The weather request did not work. Did you type a city or town name (without typos)?",
-      );
+      alert(errorMessage);
       console.log(error);
     });
 };
