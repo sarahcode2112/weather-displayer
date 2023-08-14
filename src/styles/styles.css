@@ -80,7 +80,7 @@ input {
 /* Weather description text styles */
 
 .weatherDescriptionText {
-  @apply font-semibold py-1 text-lg mt-2;
+  @apply font-semibold py-1 text-base mt-2;
 }
 
 /* Hourly forecast styles */
@@ -98,7 +98,7 @@ input {
 }
 
 .hourlyForecastRow {
-  @apply inline-block bg-green-200 bg-opacity-20 m-1 p-2 rounded text-lg;
+  @apply inline-block bg-green-200 bg-opacity-20 m-1 p-2 rounded;
   width: 100%;
   white-space: nowrap;
 }
