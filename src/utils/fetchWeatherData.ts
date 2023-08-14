@@ -6,10 +6,11 @@ export const fetchWeatherData = (
   updateResponse: (response: WeatherResponse) => void,
 ): void => {
   const apiKey = process.env.REACT_APP_API_KEY;
+  const baseUrl = process.env.REACT_APP_API_BASE_URL;
   fetch(
     // TODO: get a new API key
     // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-    `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=${unitGroup}&key=${apiKey}&contentType=json`,
+    `${baseUrl}${city}?unitGroup=${unitGroup}&key=${apiKey}&contentType=json`,
   )
     .then(async (res) => await res.json()) // parse response data into JavaScript object
     .then((objectRes: WeatherResponse) => {
