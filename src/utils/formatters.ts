@@ -4,19 +4,15 @@ export const formatResponse = (
 
 export const formatSingleDateTime = (datetimeEntry: string): string => {
   const [time] = datetimeEntry.split(" ");
-
   const hour = parseInt(time.split(":")[0], 10);
 
-  let formattedTime: string;
   if (hour === 0) {
-    formattedTime = `12AM`;
+    return `12AM`;
   } else if (hour < 12) {
-    formattedTime = `${hour}AM`;
+    return `${hour}AM`;
   } else if (hour === 12) {
-    formattedTime = `12PM`;
+    return `12PM`;
   } else {
-    formattedTime = `${hour - 12}PM`;
+    return `${hour - 12}PM`;
   }
-
-  return formattedTime;
 };
