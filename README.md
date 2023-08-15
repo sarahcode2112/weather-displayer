@@ -1,3 +1,5 @@
+This is Weather Request, an app for viewing a weather forecast in any city or town.
+
 ## Features
 
 - Search functionality to find weather forecasts for specific cities/towns.
