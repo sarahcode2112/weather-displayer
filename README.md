@@ -16,7 +16,7 @@ How to use the app:
 - Click the "Get forecast" button.
 - View the weather forecast displayed on the screen.
 
-## How to install, run and test the app locally
+## Install, run and test the app locally
 
 To install the app, you can run:
 
@@ -32,7 +32,7 @@ To run tests, you can run:
 
 ### `npm test`
 
-## Setting Up the API
+## Set Up the API
 
 The Weather Request app relies on an external weather API to provide forecasts. For free, you can make up to 1000 requests per day. To set up the API, follow these steps:
 
