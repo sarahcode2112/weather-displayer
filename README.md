@@ -1,4 +1,4 @@
-This is Weather Request, an app for viewing a weather forecast in any city or town.
+Weather Request is an app which displays a 2-day hourly temperature forecast in any city or town, in metric or imperial units.
 
 ## Features
 
