@@ -92,10 +92,12 @@ Note: Vercel will automatically handle continuous deployment. Whenever you push 
 
 To help with debugging, you can view the full API response on the web page by adding this div to a frontend component, such as WeatherDisplay:
 
+```
 <div>
     {/* Full response: {JSON.stringify(response)} */}
     {/* display response data as string */}
 </div>
+```
 
 ## Contact
 
