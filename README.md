@@ -16,6 +16,10 @@ How to use the app:
 - Click the "Get forecast" button.
 - View the weather forecast displayed on the screen.
 
+## Tech stack
+
+- This project uses React (built with create-react-app), Typescript, Tailwind, Jest, and eslint/prettier.
+
 ## Install, run and test the app locally
 
 To install the app, you can run:
