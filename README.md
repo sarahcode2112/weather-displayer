@@ -42,6 +42,52 @@ The Weather Request app relies on an external weather API to provide forecasts. 
 
 3. **API Documentation**: Optionally, you can read the [API Documentation](https://www.visualcrossing.com/resources/documentation/weather-api/timeline-weather-api/) to understand the available endpoints and how the Weather Request app structures its request.
 
+## Deploy the app
+
+This section will guide you through deploying the Weather Request app on Vercel.
+
+Before you begin, make sure you have a Vercel account. If you don't have one, you can sign up at [Vercel's website](https://vercel.com/).
+
+### Step 1: Push to GitHub
+
+To enable automatic deployment with Vercel, we recommend pushing your app to a remote Git repository on GitHub.
+
+Create a new repository on GitHub for your Weather Request app if you haven't already.
+
+Clone your app's repository to your local machine:
+
+`git clone https://github.com/your-username/your-repo-name.git`
+
+Navigate to your app's root directory:
+
+`cd your-repo-name`
+
+Copy your environment variables template into a new .env file:
+
+`cp env.template .env`
+Edit the .env file and replace YOUR_API_KEY_HERE with your actual API key, as described in the API section of the Readme.
+
+Add, commit, and push your changes to GitHub:
+
+```
+git add .
+git commit -m "Initial commit"
+git push origin main
+```
+
+### Step 2: Deploy with Vercel
+
+On your [Vercel account dashboard](https://vercel.com/dashboard), Click 'Add New', then 'Project,' then import your existing GitHub repository for Weather Request.
+
+Vercel will automatically detect your GitHub repository. Choose the default settings or customize them as desired. 
+
+Environment Variables in Vercel:
+Set up the API key using the Vercel dashboard. Go to your app's settings on Vercel and navigate to the "Environment Variables" section. Add your API key there.
+
+Once the deployment process is complete, Vercel will provide you with a URL where your app is live. You can access your app by visiting this URL.
+
+Note: Vercel will automatically handle continuous deployment. Whenever you push changes to your linked GitHub repository, Vercel will build and deploy the updated app.
+
 ## Debugging
 
 To help with debugging, you can view the full API response on the web page by adding this div to a frontend component, such as WeatherDisplay:
