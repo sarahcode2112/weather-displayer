@@ -34,7 +34,7 @@ To run tests, you can run:
 
 ## Setting Up the API
 
-The Weather Request app relies on an external weather API to provide forecasts. To set up the API connection, follow these steps:
+The Weather Request app relies on an external weather API to provide forecasts. For free, you can make up to 1000 requests per day. To set up the API, follow these steps:
 
 1. **Sign Up and Get API Key**: Visit the [Weather API Provider's Website](https://www.visualcrossing.com/sign-up) and sign up for an account. Once you're signed up, you'll be able to access your API key.
 
@@ -105,6 +105,7 @@ For questions or feedback, you can reach out to [swarrencode@gmail.com](mailto:s
 
 ## Credits
 
-This app was started with create-react-app.
-Website icon by GOWI.
-Thank you to Professor Samuel for lots of helpful feedback!
+- This app was started with create-react-app.
+- Website icon by GOWI.
+- Thank you to [Visual Crossing](visualcrossing.com) for providing free weather data.
+- Thank you to Professor Samuel for lots of helpful feedback!
