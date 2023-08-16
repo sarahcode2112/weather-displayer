@@ -28,23 +28,30 @@ This project uses:
 - eslint/prettier for linting
 - Vercel for deployment
 
-## Install, run and test the app locally
+## Installation, Local Setup, and Testing
 
-To install the app, you can run:
+To install the app, you can clone the github repository to your local machine. Navigate to the folder where you want the project to exist, and then run this command:
 
-### `npm install`
+`git clone https://github.com/sarahcode2112/weather-displayer.git`
 
-To run the app, you can run:
+Then navigate to the project directory and run in the command line:
 
-### `npm start`
+```
+cd weather-displayer
+npm install
+```
 
-View the app at [http://localhost:3000](http://localhost:3000) in a web browser.
+To run the app, you can run in the command line:
 
-To run tests, you can run:
+`npm start`
 
-### `npm test`
+Then you can view the app at [http://localhost:3000](http://localhost:3000) in a web browser.
 
-## Set Up the API
+To run tests, you can run in the command line:
+
+`npm test`
+
+## Setting Up the API
 
 The Weather Request app relies on an external weather API to provide forecasts. For free, you can make up to 1000 requests per day. To set up the API, follow these steps:
 
@@ -56,49 +63,23 @@ The Weather Request app relies on an external weather API to provide forecasts. 
 
 ## Deploy the app
 
-This section will guide you through deploying the Weather Request app on Vercel.
-
-Before you begin, make sure you have a Vercel account. If you don't have one, you can sign up at [Vercel's website](https://vercel.com/).
+This section explains how to deploy the Weather Request app on Vercel. Before you begin, make sure you have a Vercel account. If you don't have one, you can sign up at [Vercel's website](https://vercel.com/).
 
 ### Step 1: Push to GitHub
 
-To enable automatic deployment with Vercel, we recommend pushing your app to a remote Git repository on GitHub.
+To enable automatic deployment with Vercel, I recommend pushing your app to a remote Git repository on GitHub.
 
-Create a new repository on GitHub for your Weather Request app if you haven't already.
-
-Clone your app's repository to your local machine:
-
-`git clone https://github.com/your-username/your-repo-name.git`
-
-Navigate to your app's root directory:
-
-`cd your-repo-name`
-
-Copy your environment variables template into a new .env file:
-
-`cp env.template .env`
-Edit the .env file and replace YOUR_API_KEY_HERE with your actual API key, as described in the API section of the Readme.
-
-Add, commit, and push your changes to GitHub:
-
-```
-git add .
-git commit -m "Initial commit"
-git push origin main
-```
+Create a new repository on GitHub for your version of the Weather Request app if you haven't already.
 
 ### Step 2: Deploy with Vercel
 
-On your [Vercel account dashboard](https://vercel.com/dashboard), Click 'Add New', then 'Project,' then import your existing GitHub repository for Weather Request.
+On your [Vercel account dashboard](https://vercel.com/dashboard), Click 'Add New', then 'Project,' then import your existing GitHub repository for your version of Weather Request.
 
-Vercel will automatically detect your GitHub repository. Choose the default settings or customize them as desired. 
+Vercel will automatically detect the GitHub repository. Choose the default settings or customize them as desired. 
 
-Environment Variables in Vercel:
-Set up the API key using the Vercel dashboard. Go to your app's settings on Vercel and navigate to the "Environment Variables" section. Add your API key there.
+One important step is to set up the API key using the Vercel dashboard (because Vercel will not read the API key in your .env file, which is gitignored). Go to your app's settings on the Vercel website and navigate to the "Environment Variables" section. Add your API key there.
 
-Once the deployment process is complete, Vercel will provide you with a URL where your app is live. You can access your app by visiting this URL.
-
-Note: Vercel will automatically handle continuous deployment. Whenever you push changes to your linked GitHub repository, Vercel will build and deploy the updated app.
+Once the deployment process is complete, Vercel will provide you with a URL where your app is live, where you can visit the site.Vercel will automatically handle continuous deployment. Whenever you push changes to your linked GitHub repository, Vercel will build and deploy the updated app.
 
 ## Debugging
 
