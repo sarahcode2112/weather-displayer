@@ -80,13 +80,18 @@ input {
 /* Get forecast button style */
 
 .getForecastButton {
-  @apply bg-green-500 hover:bg-green-700 text-white font-bold my-4 py-2 px-4 rounded;
+  background-color: #276341;
+  @apply text-white font-bold text-lg my-4 py-2 px-4 rounded;
+}
+
+.getForecastButton:hover {
+  background-color: #043E29
 }
 
 /* Weather description text styles */
 
 .weatherDescriptionText {
-  @apply font-semibold py-1 text-base mt-2;
+  @apply font-semibold py-1 mt-2;
 }
 
 /* Hourly forecast styles */
