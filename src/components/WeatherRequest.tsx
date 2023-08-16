@@ -43,6 +43,7 @@ export const WeatherRequest: React.FC<WeatherRequestProps> = ({
         <label className="relative inline-flex items-center cursor-pointer">
           <input
             id="unitGroup"
+            aria-label="Change Unit Between Metric (Unchecked) and Imperial (Checked)"
             type="checkbox"
             value="unitGroup"
             onChange={updateUnitGroup}
