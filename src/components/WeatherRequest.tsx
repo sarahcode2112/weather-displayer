@@ -34,9 +34,15 @@ export const WeatherRequest: React.FC<WeatherRequestProps> = ({
         value={city}
       ></input>
       <div className="mt-3">
-        <span className="unitToggleButtonLabelText mr-2">Metric</span>
+        <label
+          htmlFor="unitGroup"
+          className="unitToggleButtonLabelText mr-2 cursor-not-allowed pointer-events-none"
+        >
+          Metric
+        </label>
         <label className="relative inline-flex items-center cursor-pointer">
           <input
+            id="unitGroup"
             type="checkbox"
             value="unitGroup"
             onChange={updateUnitGroup}
@@ -44,7 +50,12 @@ export const WeatherRequest: React.FC<WeatherRequestProps> = ({
           />
           <div className="unitToggleButton peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white"></div>
         </label>
-        <span className="unitToggleButtonLabelText ml-2">Imperial</span>
+        <label
+          htmlFor="unitGroup"
+          className="unitToggleButtonLabelText ml-2 cursor-not-allowed pointer-events-none"
+        >
+          Imperial
+        </label>
       </div>
       <div>
         <button className="getForecastButton" onClick={requestWeather}>
