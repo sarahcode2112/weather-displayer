@@ -1,4 +1,7 @@
-Weather Request is an app which displays a 2-day hourly temperature forecast in any city or town, in metric or imperial units.
+# Weather Request
+
+Weather Request displays a an hourly forecast in any city or town searched by the user, in metric or imperial units. The app is currently [deployed at Vercel](https://weather-displayer-eta.vercel.app/).
+I built the app to learn more about React state management, clean code, testing, UI, deployment, and API calls.
 
 ## Features
 
