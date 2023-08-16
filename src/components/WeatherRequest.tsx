@@ -34,16 +34,13 @@ export const WeatherRequest: React.FC<WeatherRequestProps> = ({
         value={city}
       ></input>
       <div className="mt-3">
-        <label
-          htmlFor="unitGroup"
-          className="unitToggleButtonLabelText metric mr-2 cursor-not-allowed pointer-events-none"
-        >
+        <span className="unitToggleButtonLabelText metric mr-2 cursor-not-allowed pointer-events-none">
           Metric
-        </label>
+        </span>
         <label className="relative inline-flex items-center cursor-pointer">
           <input
             id="unitGroup"
-            // aria-label="Change Unit Between Metric (Unchecked) and Imperial (Checked)"
+            aria-label="Toggle Unit Group: Metric (Unchecked) and Imperial (Checked)"
             aria-labelledby="unitToggleButtonLabelText metric imperial"
             type="checkbox"
             value="unitGroup"
@@ -52,12 +49,9 @@ export const WeatherRequest: React.FC<WeatherRequestProps> = ({
           />
           <div className="unitToggleButton peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white"></div>
         </label>
-        <label
-          htmlFor="unitGroup"
-          className="unitToggleButtonLabelText imperial ml-2 cursor-not-allowed pointer-events-none"
-        >
+        <span className="unitToggleButtonLabelText imperial ml-2 cursor-not-allowed pointer-events-none">
           Imperial
-        </label>
+        </span>
       </div>
       <div>
         <button className="getForecastButton" onClick={requestWeather}>
