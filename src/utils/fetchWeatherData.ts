@@ -11,7 +11,6 @@ export const fetchWeatherData = (
 ): void => {
   const apiKey = process.env.REACT_APP_API_KEY;
   fetch(
-    // TODO: get a new API key
     // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
     `${baseUrl}${city}?unitGroup=${unitGroup}&key=${apiKey}&contentType=json`,
   )
